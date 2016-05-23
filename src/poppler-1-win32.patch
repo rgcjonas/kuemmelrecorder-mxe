@@ -102,21 +102,21 @@ index 6ed890a..8b7222b 100644
  
  #define xpdfGetInfoDict (*xpdfPluginVecTable._xpdfGetInfoDict)
  #define xpdfGetCatalog (*xpdfPluginVecTable._xpdfGetCatalog)
-diff --git a/qt4/src/poppler-export.h b/qt4/src/poppler-export.h
+diff --git a/qt5/src/poppler-export.h b/qt5/src/poppler-export.h
 index 2e2f6ff..e625564 100644
---- a/qt4/src/poppler-export.h
-+++ b/qt4/src/poppler-export.h
+--- a/qt5/src/poppler-export.h
++++ b/qt5/src/poppler-export.h
 @@ -2,10 +2,7 @@
- * This file is used to set the poppler_qt4_EXPORT macros right.
+ * This file is used to set the poppler_qt5_EXPORT macros right.
  * This is needed for setting the visibility on windows, it will have no effect on other platforms.
  */
 -#if defined(_WIN32)
--# define _POPPLER_QT4_LIB_EXPORT __declspec(dllexport)
--# define _POPPLER_QT4_LIB_IMPORT __declspec(dllimport)
+-# define _POPPLER_QT5_LIB_EXPORT __declspec(dllexport)
+-# define _POPPLER_QT5_LIB_IMPORT __declspec(dllimport)
 -#elif defined(__GNUC__)
 +#if defined(__GNUC__)
- # define _POPPLER_QT4_LIB_EXPORT __attribute__((visibility("default")))
- # define _POPPLER_QT4_LIB_IMPORT
+ # define _POPPLER_QT5_LIB_EXPORT __attribute__((visibility("default")))
+ # define _POPPLER_QT5_LIB_IMPORT
  #else
 -- 
 2.1.0
